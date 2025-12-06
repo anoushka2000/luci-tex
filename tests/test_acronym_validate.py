@@ -4,7 +4,6 @@ from pathlib import Path
 from subprocess import run
 
 import pytest
-
 from luci.cli import cli
 
 

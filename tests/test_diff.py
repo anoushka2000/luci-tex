@@ -4,7 +4,6 @@ import subprocess as sp
 from pathlib import Path
 
 import pytest
-
 from luci import diff as diff_mod
 from luci.cli import cli
 
