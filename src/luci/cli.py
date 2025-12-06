@@ -4,6 +4,7 @@ from .acromerge import merge_acronyms
 from .archive import archive
 from .bibtools import merge_and_dedupe, update_citation
 from .check import check
+from .diff import diff
 
 cli = typer.Typer(
     help=(
@@ -17,3 +18,4 @@ cli.command("fix-dups")(update_citation)
 cli.command()(archive)
 cli.command()(merge_acronyms)
 cli.command()(check)
+cli.command()(diff)

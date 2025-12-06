@@ -7,6 +7,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Added
+- diff: New `luci diff` subcommand to generate LaTeX diffs between a git ref
+  and either the working tree or another ref. Produces `<stem>_old.tex`,
+  `<stem>_new.tex`, and `<stem>_diff.tex` in `<stem>-diff/` by default, with
+  optional custom output directory and compilation.
+
 ### Changed
 - cli: Improve help text formatting and descriptions for all commands.
 
@@ -19,6 +25,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Tests
 - archive: Add coverage for `\documentclass` resolution.
 - check: Added tests for undefined citations, references or missing files.
+- diff: Add tests covering OLD vs working tree, two-ref mode, and custom
+  output directory; latexdiff is monkeypatched to avoid external dependency.
 
 ## [0.1.0] - 2025-08-18
 
